@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif,'AvenirBold';
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Header Section */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.background-image {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.overlay-image {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: -25px;
+    left: 200px;
+    width: 50%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    border-radius: 35px;
+    margin-top: 50px;
+    margin-left: 200px;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration:none;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Section Styling */
+section {
+    max-width: 2000px;
+    max-height: 2000px;
+    margin: 40px;
+    padding: 30px;
+    padding-bottom: 60px;
+}
+
+.slider {
+    width: 1511px;
+    height: 500px;
+    overflow:hidden;
+    position: relative;
+    margin-top: 30px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.slides img {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+ h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    
+  }
+.section {
+    width: 50%;
+    padding: 50px;
+    font-family: 'AvenirBold';
+}
+.section h2 {
+    font-family: 'AvenirBold';
+    font-weight: bold;
+}
+  
+.section hr{
+    margin-top: 3%;
+    width: 100px;
+}
+  
+.section p{
+    font-family: 'AvenirBold';
+    color: #666666;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.INFRASTRUCTURE{
+    font-family: 'Times New Roman';
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    font-size: 3.0rem;
+    padding-top: 80px;
+}
+/* Loading Animation */
+#loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Parallax Section */
+.parallax {
+    position: relative;
+    height: 80vh;
+    width: 115.1%;
+    margin-left: -10%;
+    background: url('images/img7.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    filter: blur(3px);
+}
+
+/* Text Content Overlay */
+.content {
+    font-family: 'AvenirBold';
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+    padding-top: 3000px;
+    padding-left: 10px;
+    
+}
+.counter-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Blur Effect */
+.counter-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -10%;
+    width: 118.1%;
+    height: 100%;
+    background: url('images/transistionimg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    filter: blur(5px);
+}
+
+.counter-container {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Counter Grid */
+.counters {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.counter-box {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.counter-box i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    display: block;
+    color: white;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.campus{
+    font-family: 'Times New Roman';
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    font-size: 3.0rem;
+}
+.subtitle p{
+    font-family: 'AvenirBold';
+    font-weight: 300;
+    font-size: 1.8rem;
+    color:  #7f8c8d;
+    padding-top: 20px;
+}
+  
+.line{
+    width: 160px;
+    padding-top: 3px;
+    margin-top: 1%;
+    
+}
+
+.line1{
+    width: 300px;
+    padding-top: 3px;
+    margin-top: 1%;
+}
+
+.line2{
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container p{
+    font-family: 'Times-New-Roman';
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+}
+
+.container1{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.container1 p{
+    font-family: 'Times-New-Roman';
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 300;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+.intro p {
+    font-family: 'AvenirBold';
+    font-size: 1.8rem;
+    color: #7f8c8d;
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+.intro1 p {
+    font-size: 1.8rem;
+    color: #7f8c8d;
+    font-family: 'AvenirBold';
+    padding: 20px 0;
+    text-align: center;
+}
+
+.facilities {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.facilities h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.facility-card {
+    display:inline-block;
+    width: 40%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.facility-card img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.facility-card h3 {
+    font-family: 'AvenirBold';
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #000000;
+    padding-bottom: 20px; 
+}
+
+.facility-card p {
+    font-size: 1.0rem;
+    font-family: 'AvenirBold';
+    color: #666666;
+}
+
+.facility-card:hover {
+    transform: scale(1.05);
+}
+
+.about{
+    font-family: 'Times New Roman';
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    font-size: 3.0rem;
+    padding-top: 30px;
+}
+
+.line3{
+    width: 140px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.vision{
+    font-family: 'AvenirBold';
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.line4{
+    text-align: center;
+    width: 50px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.para{
+    font-family: 'AvenirBold';
+    font-size: 20px;
+    color: #7f8c8d;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+
+.mission{
+    font-family: 'AvenirBold';
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    padding-left: -30px;
+    padding-top: 40px;
+}
+
+.Education h3{
+    font-family: 'AvenirBold';
+    font-weight: 200;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 40px;
+    margin-left: 10%;
+}
+
+.Education p{
+    font-family: 'AvenirBold';
+    font-weight: 100;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    margin-left: 10%;
+    color: #7f8c8d;
+}
+
+
+.Research h3{
+    font-family: 'AvenirBold';
+    font-weight: 200;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 40px;
+    margin-left: 10%;
+}
+
+.Research p{
+    font-family: 'AvenirBold';
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    margin-left: 10%;
+    color: #7f8c8d;
+}
+
+.hrline1{
+    width: 120px;
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10%;
+}
+
+.sustainable h3{
+    font-family: 'AvenirBold';
+    font-weight: 200;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 40px;
+    margin-left: 10%;
+}
+
+.sustainable p{
+    font-family: 'AvenirBold';
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    margin-left: 10%;
+    color: #7f8c8d;
+}
+
+
+.Industry h3{
+    font-family: 'AvenirBold';
+    font-weight: 200;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 40px;
+    margin-left: 10%;
+}
+
+.Industry p{
+    font-family: 'AvenirBold';
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 40px;
+    padding-bottom: 60px;
+    margin-left: 10%;
+    color: #7f8c8d;
+}
+
+.hrline2{
+    width: 250px;
+    padding-left: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10%;
+}
+
+.bg{
+    background-color:#FAFAFA;
+    padding-top: 60px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
